@@ -7,11 +7,11 @@ function App() {
     Gender: "",
     Age: +0
   });
-  const [myCourses, setMyCourse] = useState([]);
+  const [myData, setMyData] = useState([]);
 
   function adddata(inputData) {
     console.log(inputData);
-    setMyCourse([...myCourses, inputData]);
+    setMyData([...myData, inputData]);
   }
   //add useState for all state variables
 
@@ -74,7 +74,7 @@ function App() {
         {/* display tables for all persons */}
         <p className="is-4 title has-text-centered">Person List</p>
         {/* sample table */}
-        {myCourses.map((course, i) => (
+        {myData.map((course, i) => (
           <ItemTable
             key={i}
             {...course}
